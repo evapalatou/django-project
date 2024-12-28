@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from hello_world import views as index_views
 from about import views as about_views
+from catalogue import views as catalogue_views
 
 urlpatterns = [
     path('hello/', index_views.index, name='index'),
     path('about/', about_views.about_me, name='about'),
+    path('catalogue/', catalogue_views.catalogue, name='catalogue'),
     path('admin/', admin.site.urls),
 ]
